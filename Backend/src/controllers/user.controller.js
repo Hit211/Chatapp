@@ -37,7 +37,8 @@ export const Signup = async(req,res)=>{
                 _id:newUser._id,
                 email:newUser.email,
                 password:newUser.password,
-                profilePic:newUser.profilePic
+                profilePic:newUser.profilePic || "",
+                createdAt: newUser.createdAt
             })
         }else{
             res.status(400).json({
